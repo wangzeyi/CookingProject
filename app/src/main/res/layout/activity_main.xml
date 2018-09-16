@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/editText_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Dish Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="Step1"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_dish"
+        app:layout_constraintTop_toBottomOf="@+id/editText_dish" />
+
+    <EditText
+        android:id="@+id/editText_step2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Step2"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_step1"
+        app:layout_constraintTop_toBottomOf="@+id/editText_step1" />
+
+    <EditText
+        android:id="@+id/editText_step3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Step3"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_step2"
+        app:layout_constraintTop_toBottomOf="@+id/editText_step2" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="19dp"
+        android:text="Submit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_show"
+        app:layout_constraintEnd_toStartOf="@+id/button_show"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="clickHandler"
+        />
+
+    <Button
+        android:id="@+id/button_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Show"
+        app:layout_constraintEnd_toStartOf="@+id/button_back"
+        app:layout_constraintStart_toEndOf="@+id/button_submit"
+        app:layout_constraintTop_toBottomOf="@+id/editText_step3"
+        android:onClick="clickHandler"
+        />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="Back"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_show"
+        android:onClick="clickHandler"
+        />
+</android.support.constraint.ConstraintLayout>
