@@ -50,6 +50,7 @@ public class SecActivity extends AppCompatActivity {
             }
         });
 
-
+        Intent myintent = new Intent(SecActivity.this, MyMusicService.class);
+        startService(myintent);
     }
 }

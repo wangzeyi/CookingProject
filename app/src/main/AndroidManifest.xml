@@ -17,6 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecActivity"></activity>
+
+        <service android:name=".MyMusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>
